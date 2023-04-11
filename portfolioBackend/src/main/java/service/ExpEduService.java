@@ -4,8 +4,10 @@ import interfaz.IService;
 import java.util.List;
 import model.ExpEdu;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.ExpEduRepository;
 
+@Service
 public class ExpEduService implements IService<ExpEdu> {
 
           @Autowired
