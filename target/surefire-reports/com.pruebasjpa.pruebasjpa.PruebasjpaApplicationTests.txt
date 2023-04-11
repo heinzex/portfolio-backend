@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.pruebasjpa.pruebasjpa.PruebasjpaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 318.238 s - in com.pruebasjpa.pruebasjpa.PruebasjpaApplicationTests
