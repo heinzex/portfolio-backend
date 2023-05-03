@@ -1,10 +1,10 @@
 package repository;
 
-import model.Provincia;
+import model.Social;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProvinciaRepository extends JpaRepository<Provincia, Long> {
-
+public interface SocialRepository extends JpaRepository<Social, Long> {
+          
 }

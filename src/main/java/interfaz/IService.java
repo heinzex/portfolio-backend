@@ -1,6 +1,7 @@
 package interfaz;
 
 import java.util.List;
+import model.Usuario;
 
 public interface IService <T>{
 
@@ -13,4 +14,8 @@ public interface IService <T>{
           public boolean editar(T obj);
           
           public void eliminar(Long obj);
+          
+          default public Usuario traerPorEmail(String user){
+                    return null;
+          }
 }

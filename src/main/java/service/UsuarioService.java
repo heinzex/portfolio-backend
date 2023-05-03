@@ -44,4 +44,9 @@ public class UsuarioService implements IService<Usuario> {
                     Repo.deleteById(id);
           }
           
+          @Override
+          public Usuario traerPorEmail(String user){
+                    return Repo.findOneByEmail(user).orElse(null);
+          }
+          
 }

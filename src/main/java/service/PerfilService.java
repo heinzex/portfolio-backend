@@ -10,7 +10,7 @@ import repository.PerfilRepository;
 @Service
 public class PerfilService implements IService<Perfil>{
           @Autowired
-           PerfilRepository Repo;         
+           PerfilRepository Repo;
           
           @Override
           public List<Perfil> traerLista() {

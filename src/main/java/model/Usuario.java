@@ -1,6 +1,8 @@
 package model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -17,17 +19,16 @@ public class Usuario {
           @Id
           @GeneratedValue(strategy = GenerationType.SEQUENCE)
           private Long Id;
-          private String usuario;
           private String contraseña;
           private String email;
-          @OneToOne
-          private AcercaDe acercaDe;
-          @OneToOne
+          @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
           private Perfil perfil;
-          @OneToMany
+          @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
           private List<ExpEdu> expEdu;
-          @OneToMany
+          @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
           private List<Skill> skill;
-          @OneToMany
+          @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
           private List<Proyecto> proyecto;
+          @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+          private Social social;
 }
